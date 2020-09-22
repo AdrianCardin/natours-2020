@@ -21,6 +21,7 @@ body {
     font-size: 16px; /* Later we are going to use a better approach */
     line-height: 1.7;
     color: #777;
+    padding: 30px; /* padding is not inherit */
 }
 
 .header {
