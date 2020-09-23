@@ -151,6 +151,9 @@ body {
     height: 100%; /* It works because pseudo-elements behave like a child. So is 100% of the botton height  */
     width: 100%;
     border-radius: 100px;
+    position: absolute; /* It does not work because it is positioned with respect to the last element with relative position which is header */
+    top: 0;
+    left: 0;
 }
 
 .btn-white::after {
