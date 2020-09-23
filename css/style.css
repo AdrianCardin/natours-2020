@@ -182,4 +182,5 @@ body {
 
 .btn-animated {
     animation: moveInButton .5s ease-out .75s; /* the last value is the delay time */
+    animation-fill-mode: backwards; /* Apply 0% styles when animation starts */
 }
