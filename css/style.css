@@ -147,7 +147,7 @@ body {
 }
 
 .btn::after {
-    content: "AFTER";
+    content: "";
     display: inline-block;
     height: 100%; /* It works because pseudo-elements behave like a child. So is 100% of the botton height  */
     width: 100%;
