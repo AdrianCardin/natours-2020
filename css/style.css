@@ -58,6 +58,8 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase; 
+
+    backface-visibility: hidden; /* Trick to fix the little shaking when the animation ends */
 }
 
 .heading-primary-main {
