@@ -53,6 +53,7 @@ body {
     top: 40%; /* relative to the parent element */
     left: 50%;
     transform: translate(-50%, -50%); /* relative to itself */
+    text-align: center; /* main button is a text element. This solution is easier than using text-transform */
 }
 
 .heading-primary {
