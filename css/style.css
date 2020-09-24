@@ -15,9 +15,9 @@ Dark green: #28b485
 }
 
 html {
-    font-size: 10px; /* root font-size is 10px. Esiest for calculations 1rem = 10px*/
+    font-size: 62.5%; /* 10/16 = 0.625. This set allows users to change default font-size*/
 }
-
+ 
 
 body {
     font-family: "Lato", sans-serif; /* font is inherit by child tags. More efficient then use the universal selector */
@@ -132,7 +132,7 @@ body {
 
     100% {
         opacity: 1;
-        transform: translate(0);
+        transform: translate(0);  
     }
 }
 
