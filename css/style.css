@@ -7,7 +7,9 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit; /* Force inheritance. Better practice */
@@ -16,7 +18,7 @@ Dark green: #28b485
 html {
     font-size: 62.5%; /* 10/16 = 0.625. This set allows users to change default font-size*/
 }
- 
+
 
 body {
     font-family: "Lato", sans-serif; /* font is inherit by child tags. More efficient then use the universal selector */
