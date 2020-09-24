@@ -14,11 +14,15 @@ Dark green: #28b485
 
 }
 
+html {
+    font-size: 10px; /* root font-size is 10px. Esiest for calculations 1rem = 10px*/
+}
+
 
 body {
     font-family: "Lato", sans-serif; /* font is inherit by child tags. More efficient then use the universal selector */
     font-weight: 400;
-    font-size: 16px; /* Later we are going to use a better approach */
+    /*font-size: 16px;*/ /* Remove . Now we are using 10px root font-size*/
     line-height: 1.7;
     color: #777;
     padding: 30px; /* padding is not inherit */
