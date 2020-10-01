@@ -7,6 +7,14 @@ Dark green: #28b485
 
 */
 
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485; 
+
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
 *,
 *::after,
 *::before {
@@ -25,7 +33,7 @@ body {
     font-weight: 400;
     /*font-size: 16px;*/ /* Remove . Now we are using 10px root font-size*/
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 3rem; /* padding is not inherit */
     box-sizing: border-box; /* Not inherited */
 }
@@ -34,8 +42,8 @@ body {
     height: 95vh; /* 95% viewport height */
     background-image: linear-gradient(
         to right bottom, 
-        rgba(128, 214, 113, 0.8),
-        rgba(39, 180, 133, 0.8)), 
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)), 
         url('../img/hero.jpg');
     background-size: cover;
     background-position: top; /* ensure image always stays at the top of the page */
@@ -152,17 +160,17 @@ body {
 
 .btn:hover {
     transform: translateY(-3px); 
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2); /* x y blur color */  
+    box-shadow: 0 1rem 2rem rgba($color-black,.2); /* x y blur color */  
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 2rem rgba($color-black,.2);
 }
 
 .btn--white {
     background-color: #fff;
-    color: #777;
+    color: $color-grey-dark;
 }
 
 .btn::after {
