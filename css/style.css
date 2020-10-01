@@ -31,33 +31,25 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-  /* Force inheritance. Better practice */ }
+  box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  /* 10/16 = 0.625. This set allows users to change default font-size*/ }
+  font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  /* Not inherited */ }
+  box-sizing: border-box; }
 
 body {
   font-family: "Lato", sans-serif;
-  /* font is inherit by child tags. More efficient then use the universal selector */
   font-weight: 400;
-  /*font-size: 16px;*/
-  /* Remove . Now we are using 10px root font-size*/
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  /* padding is not inherit */ }
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  /* Trick to fix the little shaking when the animation ends */
   margin-bottom: 6rem; }
   .heading-primary--main {
     display: block;
@@ -91,8 +83,7 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* x y blur color */ }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -111,21 +102,17 @@ body {
   content: "";
   display: inline-block;
   height: 100%;
-  /* It works because pseudo-elements behave like a child. So is 100% of the botton height  */
   width: 100%;
   border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
-  /* initial state */ }
+  transition: all .4s; }
 
 .btn--animated {
   animation: moveInButton .5s ease-out .75s;
-  /* the last value is the delay time */
-  animation-fill-mode: backwards;
-  /* Apply 0% styles when animation starts */ }
+  animation-fill-mode: backwards; }
 
 .header {
   height: 95vh;
