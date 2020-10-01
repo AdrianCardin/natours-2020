@@ -56,3 +56,12 @@
         animation-fill-mode: backwards; // Apply 0% styles when animation starts
     }
 }
+.btn-text {
+
+    &.link,
+    &:visited {}
+
+    &:hover {}
+
+    &:active {}
+}
