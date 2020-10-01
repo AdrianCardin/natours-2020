@@ -39,6 +39,10 @@ html {
   /* 10/16 = 0.625. This set allows users to change default font-size*/ }
 
 body {
+  box-sizing: border-box;
+  /* Not inherited */ }
+
+body {
   font-family: "Lato", sans-serif;
   /* font is inherit by child tags. More efficient then use the universal selector */
   font-weight: 400;
@@ -47,9 +51,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  /* padding is not inherit */
-  box-sizing: border-box;
-  /* Not inherited */ }
+  /* padding is not inherit */ }
 
 .heading-primary {
   color: #fff;
