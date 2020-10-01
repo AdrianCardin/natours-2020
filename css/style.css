@@ -114,7 +114,6 @@ body {
   display: inline-block;
   border-radius: 10rem;
   transition: all .2s;
-  /*initial state */
   position: relative; }
 
 .btn:hover {
@@ -151,7 +150,12 @@ body {
   animation-fill-mode: backwards; }
 
 .btn-text.link, .btn-text:visited {
-  color: #55c57a; }
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px; }
 
 .row {
   max-width: 114rem;
