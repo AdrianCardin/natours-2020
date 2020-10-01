@@ -49,57 +49,62 @@ body {
     background-position: top; /* ensure image always stays at the top of the page */
     position: relative;
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
-}
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
 
-.header__logo {
-    height: 3.5rem;
-}
+    &__logo {
+        height: 3.5rem;
+    }
 
-.header__text-box {
-    position: absolute;
-    top: 40%; /* relative to the parent element */
-    left: 50%;
-    transform: translate(-50%, -50%); /* relative to itself */
-    text-align: center; /* main button is a text element. This solution is easier than using text-transform */
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        /* relative to the parent element */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* relative to itself */
+        text-align: center;
+        /* main button is a text element. This solution is easier than using text-transform */
+        }
 }
 
 .heading-primary {
     color: #fff;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 
-    backface-visibility: hidden; /* Trick to fix the little shaking when the animation ends */
+    backface-visibility: hidden;
+    /* Trick to fix the little shaking when the animation ends */
     margin-bottom: 6rem;
-}
 
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 700;
-    letter-spacing: 3.5rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 3.5rem;
 
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
 
-    /*
+        /*
     animation-delay: 3s;
     animation-iteration-count: 3;
     */
-}
+    }
 
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out;
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+
 }
 
 @keyframes moveInLeft {
@@ -146,56 +151,65 @@ body {
     }
 }
 
-.btn:link,
-.btn:visited {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem ;
-    display: inline-block;
-    border-radius: 10rem ;
-    transition: all .2s; /*initial state */
-    position: relative;
-}
+.btn {
 
-.btn:hover {
-    transform: translateY(-3px); 
-    box-shadow: 0 1rem 2rem rgba($color-black,.2); /* x y blur color */  
-}
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        /*initial state */
+        position: relative;
+    }
 
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 2rem rgba($color-black,.2);
-}
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        /* x y blur color */
 
-.btn--white {
-    background-color: #fff;
-    color: $color-grey-dark;
-}
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
 
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%; /* It works because pseudo-elements behave like a child. So is 100% of the botton height  */
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s; /* initial state */
-}
+    }
 
-.btn--white::after {
-    background-color: #fff;
-}
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+    }
 
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+    &--white {
+        background-color: #fff;
+        color: $color-grey-dark;
+        &::after {
+            background-color: #fff;
+        }
+    }
 
-.btn--animated {
-    animation: moveInButton .5s ease-out .75s; /* the last value is the delay time */
-    animation-fill-mode: backwards; /* Apply 0% styles when animation starts */
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        /* It works because pseudo-elements behave like a child. So is 100% of the botton height  */
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        /* initial state */
+    }
+
+    &--animated {
+        animation: moveInButton .5s ease-out .75s;
+        /* the last value is the delay time */
+        animation-fill-mode: backwards;
+        /* Apply 0% styles when animation starts */
+    }
 }
