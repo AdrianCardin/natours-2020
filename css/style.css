@@ -133,7 +133,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -164,7 +163,6 @@ body {
   .row .col-4-of-5 {
     width: calc(4 * ((100% - (5 - 1) * 6rem) / 5) + (4 - 1) * 6rem); }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
