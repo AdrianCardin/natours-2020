@@ -177,18 +177,17 @@ body {
        we add the same height of their childrens */
   height: 50rem; }
   .card__side {
-    background-color: orangered;
     color: #fff;
     font-size: 2rem;
     height: 50rem;
-    transition: all 0.8s;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden; }
     .card__side--front {
-      background-color: orangered; }
+      background-color: #fff; }
     .card__side--back {
       background-color: green;
       transform: rotateY(180deg); }
