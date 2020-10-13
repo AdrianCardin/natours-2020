@@ -175,9 +175,9 @@ body {
   /* Perspective has gone because when we use position absolute the parent(.card), has width of zero pixels.
        Here we can not use the clearfix trick, so
        we add the same height of their childrens */
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
-    height: 50rem;
+    height: 52rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;

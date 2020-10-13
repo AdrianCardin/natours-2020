@@ -5,10 +5,10 @@
     /* Perspective has gone because when we use position absolute the parent(.card), has width of zero pixels.
        Here we can not use the clearfix trick, so
        we add the same height of their childrens */
-    height: 50rem;
+    height: 52rem;
 
     &__side {
-        height: 50rem;
+        height: 52rem;
         transition: all .8s ease;
         position: absolute;
         top:0;
@@ -72,7 +72,7 @@
         ul {
             list-style: none;
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto; 
 
             li {
                 text-align: center;
