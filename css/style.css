@@ -106,6 +106,9 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top {
+  margin-top: 8rem; }
+
 .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
