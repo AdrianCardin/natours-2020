@@ -8,5 +8,9 @@
     &__icon {
         font-size: 6rem;
         margin-bottom: 0.5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark); // background-color can not use gradients
+        -webkit-background-clip: text; // clip background to the text
+        color: transparent; // hide the text to show the backgroup clipped
     }
 }
